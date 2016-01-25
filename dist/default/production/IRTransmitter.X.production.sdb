@@ -1,0 +1,306 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"16 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\ButtonMonitoring.c
+[v _MonitorMotor1IncrementButton MonitorMotor1IncrementButton `(v  1 e 0 0 ]
+"30
+[v _MonitorMotor1DecrementButton MonitorMotor1DecrementButton `(v  1 e 0 0 ]
+"44
+[v _MonitorMotor2IncrementButton MonitorMotor2IncrementButton `(v  1 e 0 0 ]
+"58
+[v _MonitorMotor2DecrementButton MonitorMotor2DecrementButton `(v  1 e 0 0 ]
+"86
+[v _MonitorMotor1Buttons MonitorMotor1Buttons `(v  1 e 0 0 ]
+"92
+[v _MonitorMotor2Buttons MonitorMotor2Buttons `(v  1 e 0 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"16 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\main.c
+[v _InitializeOutputPins InitializeOutputPins `(v  1 e 0 0 ]
+"26
+[v _IntializeInputPins IntializeInputPins `(v  1 e 0 0 ]
+"48
+[v _main main `(i  1 e 2 0 ]
+"69
+[v _Interrupt Interrupt `II(v  1 e 0 0 ]
+"4 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\uart.c
+[v _UART_Init UART_Init `(uc  1 e 1 0 ]
+"28
+[v _EnableUARTInterrupt EnableUARTInterrupt `(v  1 e 0 0 ]
+"44
+[v _UART_Read UART_Read `(uc  1 e 1 0 ]
+"55
+[v _UART_Write UART_Write `(v  1 e 0 0 ]
+"9 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\ButtonMonitoring.c
+[v _pressReleaseFlag1 pressReleaseFlag1 `uc  1 s 1 pressReleaseFlag1 ]
+"10
+[v _pressReleaseFlag2 pressReleaseFlag2 `uc  1 s 1 pressReleaseFlag2 ]
+"11
+[v _pressReleaseFlag3 pressReleaseFlag3 `uc  1 s 1 pressReleaseFlag3 ]
+"12
+[v _pressReleaseFlag4 pressReleaseFlag4 `uc  1 s 1 pressReleaseFlag4 ]
+"13
+[v _pressReleaseFlagCenter pressReleaseFlagCenter `uc  1 s 1 pressReleaseFlagCenter ]
+"14
+[v _pressReleaseFlagRelay pressReleaseFlagRelay `uc  1 s 1 pressReleaseFlagRelay ]
+[s S343 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"360 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1827.h
+[s S352 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S357 . 1 `S343 1 . 1 0 `S352 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES357  1 e 1 @11 ]
+[s S222 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"492
+[u S231 . 1 `S222 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES231  1 e 1 @13 ]
+[s S19 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1137
+[u S28 . 1 `S19 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES28  1 e 1 @140 ]
+[s S66 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1198
+[u S75 . 1 `S66 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES75  1 e 1 @141 ]
+[s S322 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1259
+[u S331 . 1 `S322 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES331  1 e 1 @145 ]
+[s S87 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1440
+[s S96 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S101 . 1 `S87 1 . 1 0 `S96 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES101  1 e 1 @149 ]
+[s S280 . 1 `uc 1 CCP1SEL 1 0 :1:0 
+`uc 1 P1CSEL 1 0 :1:1 
+`uc 1 P1DSEL 1 0 :1:2 
+`uc 1 CCP2SEL 1 0 :1:3 
+`uc 1 P2BSEL 1 0 :1:4 
+`uc 1 SS1SEL 1 0 :1:5 
+`uc 1 SDO1SEL 1 0 :1:6 
+`uc 1 RXDTSEL 1 0 :1:7 
+]
+"2734
+[u S289 . 1 `S280 1 . 1 0 ]
+[v _APFCON0bits APFCON0bits `VES289  1 e 1 @285 ]
+[s S301 . 1 `uc 1 TXCKSEL 1 0 :1:0 
+]
+"2788
+[u S303 . 1 `S301 1 . 1 0 ]
+[v _APFCON1bits APFCON1bits `VES303  1 e 1 @286 ]
+[s S40 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ANSB1 1 0 :1:1 
+`uc 1 ANSB2 1 0 :1:2 
+`uc 1 ANSB3 1 0 :1:3 
+`uc 1 ANSB4 1 0 :1:4 
+`uc 1 ANSB5 1 0 :1:5 
+`uc 1 ANSB6 1 0 :1:6 
+`uc 1 ANSB7 1 0 :1:7 
+]
+"2868
+[s S49 . 1 `uc 1 ANSELB 1 0 :8:0 
+]
+[u S51 . 1 `S40 1 . 1 0 `S49 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES51  1 e 1 @397 ]
+"3098
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"3117
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3147
+[v _SPBRG SPBRG `VEuc  1 e 1 @411 ]
+[s S119 . 1 `uc 1 WPUB0 1 0 :1:0 
+`uc 1 WPUB1 1 0 :1:1 
+`uc 1 WPUB2 1 0 :1:2 
+`uc 1 WPUB3 1 0 :1:3 
+`uc 1 WPUB4 1 0 :1:4 
+`uc 1 WPUB5 1 0 :1:5 
+`uc 1 WPUB6 1 0 :1:6 
+`uc 1 WPUB7 1 0 :1:7 
+]
+"3453
+[s S128 . 1 `uc 1 WPUB 1 0 :8:0 
+]
+[u S130 . 1 `S119 1 . 1 0 `S128 1 . 1 0 ]
+[v _WPUBbits WPUBbits `VES130  1 e 1 @525 ]
+"6694
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"6900
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"7212
+[v _RA0 RA0 `VEb  1 e 0 @96 ]
+"7214
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
+"7216
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"7218
+[v _RA3 RA3 `VEb  1 e 0 @99 ]
+"7220
+[v _RA4 RA4 `VEb  1 e 0 @100 ]
+"7222
+[v _RA5 RA5 `VEb  1 e 0 @101 ]
+"7248
+[v _RCIF RCIF `VEb  1 e 0 @141 ]
+"7270
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"7344
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"7488
+[v _TRMT TRMT `VEb  1 e 0 @3313 ]
+"7512
+[v _TXEN TXEN `VEb  1 e 0 @3317 ]
+"48 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"67
+} 0
+"4 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\uart.c
+[v _UART_Init UART_Init `(uc  1 e 1 0 ]
+{
+"6
+[v UART_Init@x x `ui  1 a 2 27 ]
+"4
+[v UART_Init@baudrate baudrate `DCCl  1 p 4 15 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"11
+[v ___aldiv@quotient quotient `l  1 a 4 11 ]
+"12
+[v ___aldiv@sign sign `uc  1 a 1 10 ]
+[v ___aldiv@counter counter `uc  1 a 1 9 ]
+"6
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"42
+} 0
+"92 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\ButtonMonitoring.c
+[v _MonitorMotor2Buttons MonitorMotor2Buttons `(v  1 e 0 0 ]
+{
+"96
+} 0
+"44
+[v _MonitorMotor2IncrementButton MonitorMotor2IncrementButton `(v  1 e 0 0 ]
+{
+"56
+} 0
+"58
+[v _MonitorMotor2DecrementButton MonitorMotor2DecrementButton `(v  1 e 0 0 ]
+{
+"70
+} 0
+"86
+[v _MonitorMotor1Buttons MonitorMotor1Buttons `(v  1 e 0 0 ]
+{
+"90
+} 0
+"16
+[v _MonitorMotor1IncrementButton MonitorMotor1IncrementButton `(v  1 e 0 0 ]
+{
+"28
+} 0
+"30
+[v _MonitorMotor1DecrementButton MonitorMotor1DecrementButton `(v  1 e 0 0 ]
+{
+"42
+} 0
+"55 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\uart.c
+[v _UART_Write UART_Write `(v  1 e 0 0 ]
+{
+[v UART_Write@data data `uc  1 a 1 wreg ]
+[v UART_Write@data data `uc  1 a 1 wreg ]
+[v UART_Write@data data `uc  1 a 1 0 ]
+"59
+} 0
+"26 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\main.c
+[v _IntializeInputPins IntializeInputPins `(v  1 e 0 0 ]
+{
+"46
+} 0
+"16
+[v _InitializeOutputPins InitializeOutputPins `(v  1 e 0 0 ]
+{
+"24
+} 0
+"28 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\uart.c
+[v _EnableUARTInterrupt EnableUARTInterrupt `(v  1 e 0 0 ]
+{
+"33
+} 0
+"69 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\main.c
+[v _Interrupt Interrupt `II(v  1 e 0 0 ]
+{
+"73
+[v Interrupt@letterReceived letterReceived `uc  1 a 1 4 ]
+"118
+} 0
+"44 C:\Users\JuanDesktop\MPLABXProjects\IRTransmitter.X\uart.c
+[v _UART_Read UART_Read `(uc  1 e 1 0 ]
+{
+"47
+} 0
